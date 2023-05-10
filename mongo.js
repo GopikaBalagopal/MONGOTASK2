@@ -1,0 +1,526 @@
+// Design database for Zen class programme
+// users
+// codekata
+// attendance
+// topics
+// tasks
+// company_drives
+// mentors
+
+
+
+db.createCollection("users");
+
+db.users.insertMany([
+    {
+        Id: 1,
+        Name: "Virat Kohli",
+        Email: "ViratKohli@gmail.com",
+        Mobile: 8284868789
+    },
+    {
+        Id: 2,
+        Name: "Glenn Maxwell",
+        Email: "GlennMaxwell@gmail.com",
+        Mobile: 9898969696
+    },
+    {
+        Id: 3,
+        Name: "Mohammad Siraj",
+        Email: "MohammadSiraj@gmail.com",
+        Mobile: 7894561234
+    },
+    {
+        Id: 4,
+        Name: "Faf Du Plessis (c)",
+        Email: "FafDuPlessis@gmail.com",
+        Mobile: 8284868458
+    },
+    {
+        Id: 5,
+        Name: "Harshal Patel",
+        Email: "HarshalPatel@gmail.com",
+        Mobile: 8284788789
+    },
+    {
+        Id: 6,
+        Name: "Wanindu Hasaranga",
+        Email: "WaninduHasaranga@gmail.com",
+        Mobile: 9898868789
+    },
+    {
+        Id: 7,
+        Name: "Dinesh Karthik",
+        Email: "DineshKarthik@gmail.com",
+        Mobile: 8284862222
+    },
+    {
+        Id: 8,
+        Name: "Shahbaz Ahemad",
+        Email: "ShahbazAhemad@gmail.com",
+        Mobile: 8894868789
+    },
+    {
+        Id: 9,
+        Name: "Anuj Rawat",
+        Email: "AnujRawat@gmail.com",
+        Mobile: 9284868789
+    },
+    {
+        Id: 10,
+        Name: "AkashDeep",
+        Email: "AkashDeep@gmail.com",
+        Mobile: 7284868789
+    },
+    {
+        Id: 11,
+        Name: "Josh Hazlewood",
+        Email: "JoshHazlewood@gmail.com",
+        Mobile: 8294868789
+    },
+    {
+        Id: 12,
+        Name: "Mahipal Lomror",
+        Email: "MahipalLomror@gmail.com",
+        Mobile: 8285168789
+    },
+    {
+        Id: 13,
+        Name: "Finn Allen",
+        Email: "FinnAllen@gmail.com",
+        Mobile: 8281118789
+    },
+    {
+        Id: 14,
+        Name: "Suyash Prabhudessai",
+        Email: "SuyashPrabhudessai@gmail.com",
+        Mobile: 8284868333
+    },
+    {
+        Id: 15,
+        Name: "Karn Sharma",
+        Email: "KarnSharma@gmail.com",
+        Mobile: 8284868888
+    },
+    {
+        Id: 16,
+        Name: "Siddharth Kaul",
+        Email: "SiddharthKaul@gmail.com",
+        Mobile: 8284868666
+    },
+    {
+        Id: 17,
+        Name: "David Willey",
+        Email: "DavidWilley@gmail.com",
+        Mobile: 9684868789
+    },
+]);
+
+db.createCollection("Codekata")
+
+db.Codekata.insertMany([
+    {
+        Id: 1,
+        Solved_testcases: 50,
+    },
+    {
+        Id: 2,
+        Solved_testcases: 100,
+    },
+    {
+        Id: 3,
+        Solved_testcases: 200,
+    },
+    {
+        Id: 4,
+        Solved_testcases: 250,
+    },
+    {
+        Id: 5,
+        Solved_testcases: 300,
+    },
+    {
+        Id: 6,
+        Solved_testcases: 350,
+    },
+    {
+        Id: 7,
+        Solved_testcases: 400,
+    },
+    {
+        Id: 8,
+        Solved_testcases: 450,
+    },
+    {
+        Id: 9,
+        Solved_testcases: 70,
+    },
+    {
+        Id: 10,
+        Solved_testcases: 90,
+    },
+    {
+        Id: 11,
+        Solved_testcases: 289,
+    },
+    {
+        Id: 12,
+        Solved_testcases: 66,
+    },
+    {
+        Id: 13,
+        Solved_testcases: 30,
+    },
+    {
+        Id: 14,
+        Solved_testcases: 70,
+    },
+    {
+        Id: 15,
+        Solved_testcases: 20,
+    },
+    {
+        Id: 16,
+        Solved_testcases: 500,
+    },
+    {
+        Id: 17,
+        Solved_testcases: 650,
+    },
+]);
+
+db.createCollection("Attendance")
+
+db.Attendance.insertMany([
+    {
+        Id: 1,
+        total_attendance_in_percentage: 100,
+    },
+    {
+        Id: 2,
+        total_attendance_in_percentage: 99,
+    },
+    {
+        Id: 3,
+        total_attendance_in_percentage: 98,
+    },
+    {
+        Id: 4,
+        total_attendance_in_percentage: 95,
+    },
+    {
+        Id: 5,
+        total_attendance_in_percentage: 99,
+    },
+    {
+        Id: 6,
+        total_attendance_in_percentage: 85,
+    },
+    {
+        Id: 7,
+        total_attendance_in_percentage: 96,
+    },
+    {
+        Id: 8,
+        total_attendance_in_percentage: 89,
+    },
+    {
+        Id: 9,
+        total_attendance_in_percentage: 97,
+    },
+    {
+        Id: 10,
+        total_attendance_in_percentage: 91,
+    },
+    {
+        Id: 11,
+        total_attendance_in_percentage: 99,
+    },
+    {
+        Id: 12,
+        total_attendance_in_percentage: 96,
+    },
+    {
+        Id: 13,
+        total_attendance_in_percentage: 75,
+    },
+    {
+        Id: 14,
+        total_attendance_in_percentage: 80,
+    },
+    {
+        Id: 15,
+        total_attendance_in_percentage: 97,
+    },
+    {
+        Id: 16,
+        total_attendance_in_percentage: 85,
+    },
+    {
+        Id: 17,
+        total_attendance_in_percentage: 87,
+    },
+]);
+
+db.createCollection("Topics")
+
+db.Topics.insertMany([
+    {
+        Tid: 1,
+        Topic: "JavaScript",
+        Date: new ISODate("2021-10-01"),
+    },
+    {
+        Tid: 2,
+        Topic: "HTML",
+        Date: new ISODate("2021-10-05"),
+    },
+    {
+        Tid: 3,
+        Topic: "CSS",
+        Date: new ISODate("2021-10-10"),
+    },
+    {
+        Tid: 4,
+        Topic: "React",
+        Date: new ISODate("2021-10-15"),
+    },
+    {
+        Tid: 5,
+        Topic: "MYSQL",
+        Date: new ISODate("2021-10-31"),
+    },
+    {
+        Tid: 6,
+        Topic: "MongoDB",
+        Date: new ISODate("2021-11-01"),
+    },
+    {
+        Tid: 7,
+        Topic: "NodeJS",
+        Date: new ISODate("2021-10-28"),
+    },
+    {
+        Tid: 8,
+        Topic: "FSD DEMO",
+        Date: new ISODate("2021-11-05"),
+    },
+    {
+        Tid: 9,
+        Topic: "Redux",
+        Date: new ISODate("2021-10-08"),
+    },
+]);
+
+db.createCollection("Tasks");
+
+db.Tasks.insertMany([
+    {
+        Taskno: 1,
+        Tid: 1,
+        no_of_users_submitted: 17,
+        task: "JavaScript task",
+        due_date: new ISODate("2021-10-23"),
+    },
+    {
+        Taskno: 2,
+        Tid: 2,
+        no_of_users_submitted: 12,
+        task: "HTML task",
+        due_date: new ISODate("2021-10-28"),
+    },
+    {
+        Taskno: 3,
+        Tid: 3,
+        no_of_users_submitted: 9,
+        task: "CSS task",
+        due_date: new ISODate("2021-10-29"),
+    },
+    {
+        Taskno: 4,
+        Tid: 4,
+        no_of_users_submitted: 5,
+        task: "React task",
+        due_date: new ISODate("2021-10-28"),
+    },
+    {
+        Taskno: 5,
+        Tid: 5,
+        no_of_users_submitted: 16,
+        task: "MYSQL",
+        due_date: new ISODate("2021-11-05"),
+    },
+    {
+        Taskno: 6,
+        Tid: 6,
+        no_of_users_submitted: 8,
+        task: "MongoDB",
+        due_date: new ISODate("2021-11-15"),
+    },
+    {
+        Taskno: 7,
+        Tid: 7,
+        no_of_users_submitted: 10,
+        task: "Nodejs",
+        due_date: new ISODate("2021-10-31"),
+    },
+]);
+
+
+db.createCollection("Company_drives")
+
+
+db.Company_drives.insertMany([
+    {
+        Company_name: "GOOGLE",
+        Drive_Date: new ISODate("2023-05-20"),
+        Id: 8
+    },
+    {
+        Company_name: "APPLE",
+        Drive_Date: new ISODate("2023-05-21"),
+        Id: 10
+    },
+    {
+        Company_name: "MICROSOFT",
+        Drive_Date: new ISODate("2023-05-22"),
+        Id: 16
+    },
+    {
+        Company_name: "AMAZON",
+        Drive_Date: new ISODate("2023-05-23"),
+        Id: 6
+    },
+    {
+        Company_name: "ORACLE",
+        Drive_Date: new ISODate("2023-05-21"),
+        Id: 17
+    },
+    {
+        Company_name: "IBM",
+        Drive_Date: new ISODate("2023-05-24"),
+        Id: 15
+    },
+    {
+        Company_name: "ADOBE",
+        Drive_Date: new ISODate("2023-05-30"),
+        Id: 2
+    },
+    {
+        Company_name: "CISCO",
+        Drive_Date: new ISODate("2023-06-01"),
+        Id: 9
+    },
+    {
+        Company_name: "INTEL",
+        Drive_Date: new ISODate("2023-05-20"),
+        Id: 1
+    },
+]);
+
+db.createCollection("Mentors");
+
+db.Mentors.insertMany([
+    {
+        Mentor_id: 01,
+        Mentor_name: "Rohit Sharma",
+        Mentor_github: "https://github.com/RohitSharma",
+        mentee_count: 6
+    },
+    {
+        Mentor_id: 02,
+        Mentor_name: "MS Dhoni",
+        Mentor_github: "https://github.com/MSDhoni",
+        mentee_count: 5
+    },
+    {
+        Mentor_id: 03,
+        Mentor_name: "Faf du Plessis",
+        Mentor_github: "https://github.com/FafduPlessis",
+        mentee_count: 8
+    },
+    {
+        Mentor_id: 04,
+        Mentor_name: "David Warner",
+        Mentor_github: "https://github.com/DavidWarner",
+        mentee_count: 10
+    },
+    {
+        Mentor_id: 05,
+        Mentor_name: "Sanju Samson",
+        Mentor_github: "https://github.com/SanjuSamson",
+        mentee_count: 2
+    },
+    {
+        Mentor_id: 06,
+        Mentor_name: "Shikhar Dhawan",
+        Mentor_github: "https://github.com/ShikharDhawan",
+        mentee_count: 9
+    },
+    {
+        Mentor_id: 07,
+        Mentor_name: "Aiden Markram",
+        Mentor_github: "https://github.com/AidenMarkram",
+        mentee_count: 12
+    },
+    {
+        Mentor_id: 08,
+        Mentor_name: "KL Rahul",
+        Mentor_github: "https://github.com/KLRahul",
+        mentee_count: 3
+    },
+    {
+        Mentor_id: 09,
+        Mentor_name: "Hardik Pandya",
+        Mentor_github: "https://github.com/HardikPandya",
+        mentee_count: 2
+    },
+]);
+
+
+
+// Find all the topics and tasks which are thought in the month of October
+db.Topics.find({ $and: [{ Date: { $gte: new ISODate("2021-10-01") } }, { Date: { $lte: new ISODate("2021-10-31") } }] }).pretty();
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf28"),
+        "Tid" : 1, "Topic" : "JavaScript",
+            "Date" : ISODate("2021-10-01T00:00:00Z")
+}
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf29"),
+        "Tid" : 2,
+            "Topic" : "HTML",
+                "Date" : ISODate("2021-10-05T00:00:00Z")
+}
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf2a"),
+        "Tid" : 3,
+            "Topic" : "CSS",
+                "Date" : ISODate("2021-10-10T00:00:00Z")
+}
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf2b"),
+        "Tid" : 4,
+            "Topic" : "React",
+                "Date" : ISODate("2021-10-15T00:00:00Z")
+}
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf2c"),
+        "Tid" : 5,
+            "Topic" : "MYSQL",
+                "Date" : ISODate("2021-10-31T00:00:00Z")
+}
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf2e"),
+        "Tid" : 7,
+            "Topic" : "NodeJS",
+                "Date" : ISODate("2021-10-28T00:00:00Z")
+}
+{
+    "_id" : ObjectId("645bc00fe83377fc1da0bf30"),
+        "Tid" : 9,
+            "Topic" : "Redux",
+                "Date" : ISODate("2021-10-08T00:00:00Z")
+}
+
+
