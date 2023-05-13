@@ -194,71 +194,71 @@ db.createCollection("Attendance")
 db.Attendance.insertMany([
     {
         Id: 1,
-        total_attendance_in_percentage: 100,
+        Present: "y",
     },
     {
         Id: 2,
-        total_attendance_in_percentage: 99,
+        Present: "y",
     },
     {
         Id: 3,
-        total_attendance_in_percentage: 98,
+        Present: "y",
     },
     {
         Id: 4,
-        total_attendance_in_percentage: 95,
+        Present: "N",
     },
     {
         Id: 5,
-        total_attendance_in_percentage: 99,
+        Present: "y",
     },
     {
         Id: 6,
-        total_attendance_in_percentage: 85,
+        Present: "N",
     },
     {
         Id: 7,
-        total_attendance_in_percentage: 96,
+        Present: "N",
     },
     {
         Id: 8,
-        total_attendance_in_percentage: 89,
+        Present: "N",
     },
     {
         Id: 9,
-        total_attendance_in_percentage: 97,
+        Present: "y",
     },
     {
         Id: 10,
-        total_attendance_in_percentage: 91,
+        Present: "y",
     },
     {
         Id: 11,
-        total_attendance_in_percentage: 99,
+        Present: "y",
     },
     {
         Id: 12,
-        total_attendance_in_percentage: 96,
+        Present: "y",
     },
     {
         Id: 13,
-        total_attendance_in_percentage: 75,
+        Present: "y",
     },
     {
         Id: 14,
-        total_attendance_in_percentage: 80,
+        Present: "N",
     },
     {
         Id: 15,
-        total_attendance_in_percentage: 97,
+        Present: "N",
     },
     {
         Id: 16,
-        total_attendance_in_percentage: 85,
+        Present: "N",
     },
     {
         Id: 17,
-        total_attendance_in_percentage: 87,
+        Present: "y",
     },
 ]);
 
@@ -373,27 +373,27 @@ db.createCollection("Company_drives")
 db.Company_drives.insertMany([
     {
         Company_name: "GOOGLE",
-        Drive_Date: new ISODate("2023-05-20"),
+        Drive_Date: new ISODate("2020-10-15"),
         Id: 8
     },
     {
         Company_name: "APPLE",
-        Drive_Date: new ISODate("2023-05-21"),
+        Drive_Date: new ISODate("2020-10-18"),
         Id: 10
     },
     {
         Company_name: "MICROSOFT",
-        Drive_Date: new ISODate("2023-05-22"),
+        Drive_Date: new ISODate("2020-10-25"),
         Id: 16
     },
     {
         Company_name: "AMAZON",
-        Drive_Date: new ISODate("2023-05-23"),
+        Drive_Date: new ISODate("2020-10-30"),
         Id: 6
     },
     {
         Company_name: "ORACLE",
-        Drive_Date: new ISODate("2023-05-21"),
+        Drive_Date: new ISODate("2020-11-01"),
         Id: 17
     },
     {
@@ -481,46 +481,306 @@ db.Mentors.insertMany([
 
 // Find all the topics and tasks which are thought in the month of October
 db.Topics.find({ $and: [{ Date: { $gte: new ISODate("2021-10-01") } }, { Date: { $lte: new ISODate("2021-10-31") } }] }).pretty();
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf28"),
-        "Tid" : 1, "Topic" : "JavaScript",
-            "Date" : ISODate("2021-10-01T00:00:00Z")
-}
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf29"),
-        "Tid" : 2,
-            "Topic" : "HTML",
-                "Date" : ISODate("2021-10-05T00:00:00Z")
-}
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf2a"),
-        "Tid" : 3,
-            "Topic" : "CSS",
-                "Date" : ISODate("2021-10-10T00:00:00Z")
-}
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf2b"),
-        "Tid" : 4,
-            "Topic" : "React",
-                "Date" : ISODate("2021-10-15T00:00:00Z")
-}
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf2c"),
-        "Tid" : 5,
-            "Topic" : "MYSQL",
-                "Date" : ISODate("2021-10-31T00:00:00Z")
-}
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf2e"),
-        "Tid" : 7,
-            "Topic" : "NodeJS",
-                "Date" : ISODate("2021-10-28T00:00:00Z")
-}
-{
-    "_id" : ObjectId("645bc00fe83377fc1da0bf30"),
-        "Tid" : 9,
-            "Topic" : "Redux",
-                "Date" : ISODate("2021-10-08T00:00:00Z")
-}
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf28"),
+// "Tid" : 1, "Topic" : "JavaScript",
+// "Date" : ISODate("2021-10-01T00:00:00Z")
+// }
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf29"),
+// "Tid" : 2,
+// "Topic" : "HTML",
+// "Date" : ISODate("2021-10-05T00:00:00Z")
+// }
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf2a"),
+// "Tid" : 3,
+// "Topic" : "CSS",
+// "Date" : ISODate("2021-10-10T00:00:00Z")
+// }
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf2b"),
+// "Tid" : 4,
+// "Topic" : "React",
+// "Date" : ISODate("2021-10-15T00:00:00Z")
+// }
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf2c"),
+// "Tid" : 5,
+// "Topic" : "MYSQL",
+// "Date" : ISODate("2021-10-31T00:00:00Z")
+// }
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf2e"),
+// "Tid" : 7,
+// "Topic" : "NodeJS",
+// "Date" : ISODate("2021-10-28T00:00:00Z")
+// }
+// {
+// "_id" : ObjectId("645bc00fe83377fc1da0bf30"),
+// "Tid" : 9,
+// "Topic" : "Redux",
+// "Date" : ISODate("2021-10-08T00:00:00Z")
+// }
 
 
+db.Tasks.find({ $and: [{ due_date: { $gte: new ISODate("2021-10-05") } }, { due_date: { $lte: new ISODate("2021-10-30") } }] }).pretty();
+
+// { 
+//     "_id" : ObjectId("645a90e15f1435f87f0768b4"), 
+//     "Taskno" : 1, 
+//     "Tid" : 1, 
+//     "no_of_users_submitted" : 17, 
+//     "task" : "JavaScript task", 
+//     "due_date" : ISODate("2021-10-23T00:00:00Z") 
+// } 
+// { 
+//     "_id" : ObjectId("645a90e15f1435f87f0768b5"), 
+//     "Taskno" : 2, 
+//     "Tid" : 2, 
+//     "no_of_users_submitted" : 12, 
+//     "task" : "HTML task", 
+//     "due_date" : ISODate("2021-10-28T00:00:00Z") 
+// } 
+// { 
+//     "_id" : ObjectId("645a90e15f1435f87f0768b6"), 
+//     "Taskno" : 3, 
+//     "Tid" : 3, 
+//     "no_of_users_submitted" : 9, 
+//     "task" : "CSS task", 
+//     "due_date" : ISODate("2021-10-29T00:00:00Z") 
+// } 
+// { 
+//     "_id" : ObjectId("645a90e15f1435f87f0768b7"), 
+//     "Taskno" : 4, 
+//     "Tid" : 4, 
+//     "no_of_users_submitted" : 5, 
+//     "task" : "React task", 
+//     "due_date" : ISODate("2021-10-28T00:00:00Z") 
+// }
+
+// Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+
+db.Company_drives.find({ $and: [{ Drive_Date: { $lte: new ISODate("2021-10-31") } }, { Drive_Date: { $gte: new ISODate("2021-10-15") } }] }).pretty();
+
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c6829"),
+// "Company_name" : "GOOGLE",
+// "Drive_Date" : ISODate("2020-10-15T00:00:00Z"),
+// "Id" : 8
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682a"),
+// "Company_name" : "APPLE",
+// "Drive_Date" : ISODate("2020-10-18T00:00:00Z"),
+// "Id" : 10
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682b"),
+// "Company_name" : "MICROSOFT",
+// "Drive_Date" : ISODate("2020-10-25T00:00:00Z"),
+// "Id" : 16
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682c"),
+// "Company_name" : "AMAZON",
+// "Drive_Date" : ISODate("2020-10-30T00:00:00Z"),
+// "Id" : 6
+// }
+
+db.Company_drives.find().pretty();
+
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c6829"),
+// "Company_name" : "GOOGLE",
+// "Drive_Date" : ISODate("2020-10-15T00:00:00Z"),
+// "Id" : 8
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682a"),
+// "Company_name" : "APPLE",
+// "Drive_Date" : ISODate("2020-10-18T00:00:00Z"),
+// "Id" : 10
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682b"),
+// "Company_name" : "MICROSOFT",
+// "Drive_Date" : ISODate("2020-10-25T00:00:00Z"),
+// "Id" : 16
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682c"),
+// "Company_name" : "AMAZON",
+// "Drive_Date" : ISODate("2020-10-30T00:00:00Z"),
+// "Id" : 6
+// }
+// {
+// "_id" : ObjectId("645fd3623addc2243a6c682d"),
+// "Company_name" : "ORACLE",
+// "Drive_Date" : ISODate("2020-11-01T00:00:00Z"),
+// "Id" : 17
+// }
+// { 
+// "_id" : ObjectId("645fd3623addc2243a6c682e"), 
+// "Company_name" : "IBM", 
+// "Drive_Date" : ISODate("2023-05-24T00:00:00Z"), 
+// "Id" : 15 
+// } 
+// { 
+// "_id" : ObjectId("645fd3623addc2243a6c682f"), 
+// "Company_name" : "ADOBE", 
+// "Drive_Date" : ISODate("2023-05-30T00:00:00Z"), 
+// "Id" : 2 
+// } 
+// { 
+// "_id" : ObjectId("645fd3623addc2243a6c6830"), 
+// "Company_name" : "CISCO", 
+// "Drive_Date" : ISODate("2023-06-01T00:00:00Z"), 
+// "Id" : 9 
+// } 
+// { 
+// "_id" : ObjectId("645fd3623addc2243a6c6831"), 
+// "Company_name" : "INTEL", 
+// "Drive_Date" : ISODate("2023-05-20T00:00:00Z"), 
+// "Id" : 1 
+// }
+
+//Find the number of problems solved by the user in codekata
+
+db.Codekata.find({}).pretty();
+
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf06"), 
+// "Id" : 1, 
+// "Solved_testcases" : 50 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf07"), 
+// "Id" : 2, 
+// "Solved_testcases" : 100 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf08"), 
+// "Id" : 3, 
+// "Solved_testcases" : 200 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf09"), 
+// "Id" : 4, 
+// "Solved_testcases" : 250 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf0a"), 
+// "Id" : 5, 
+// "Solved_testcases" : 300 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf0b"), 
+// "Id" : 6, 
+// "Solved_testcases" : 350 
+// }
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf0c"), 
+// "Id" : 7, 
+// "Solved_testcases" : 400 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf0d"), 
+// "Id" : 8, 
+// "Solved_testcases" : 450 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf0e"), 
+// "Id" : 9, 
+// "Solved_testcases" : 70 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf0f"), 
+// "Id" : 10, 
+// "Solved_testcases" : 90 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf10"), 
+// "Id" : 11, 
+// "Solved_testcases" : 289 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf11"), 
+// "Id" : 12, 
+// "Solved_testcases" : 66 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf12"), 
+// "Id" : 13, 
+// "Solved_testcases" : 30 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf13"), 
+// "Id" : 14, 
+// "Solved_testcases" : 70 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf14"), 
+// "Id" : 15, 
+// "Solved_testcases" : 20 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf15"), 
+// "Id" : 16, 
+// "Solved_testcases" : 500 
+// } 
+// { 
+// "_id" : ObjectId("645bbfc3e83377fc1da0bf16"), 
+// "Id" : 17, 
+// "Solved_testcases" : 650 
+// }
+
+// Find all the mentors with who has the mentee's count more than 15
+db.Mentors.find({ mentee_count: { $gte: 15 } }).pretty();
+
+// { 
+//     "_id" : ObjectId("645bd99be83377fc1da0bf59"), 
+//     "Mentor_id" : 7, 
+//     "Mentor_name" : "Aiden Markram", 
+//     "Mentor_github" : "https://github.com/AidenMarkram", 
+//     "mentee_count" : 15 
+// }
+
+
+
+// Find the number of users who are absent and task is not submitted  between 15 oct-2020 and 31-oct-2020
+
+db.Attendance.find({ Present: { $eq: "N" } }).pretty();
+
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf5f"), 
+//     "Id" : 4, "Present" : "N" 
+// } 
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf61"), 
+//     "Id" : 6, "Present" : "N" 
+// } 
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf62"), 
+//     "Id" : 7, 
+//     "Present" : "N" 
+// } 
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf63"), 
+//     "Id" : 8, "Present" : "N" 
+// } 
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf69"), 
+//     "Id" : 14, "Present" : "N" 
+// } 
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf6a"), 
+//     "Id" : 15, 
+//     "Present" : "N" 
+// } 
+// { 
+//     "_id" : ObjectId("645bdb59e83377fc1da0bf6b"), 
+//     "Id" : 16, 
+//     "Present" : "N" 
+// }  
